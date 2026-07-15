@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multiverse Shift</title>
+  <meta name="description" content="Shift between parallel universes. Collect fragments. Survive the collapse." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="app">
+    <header class="hud">
+      <div class="hud-block">
+        <span class="label">Score</span>
+        <span id="score">0</span>
+      </div>
+      <div class="hud-block universe">
+        <span class="label">Universe</span>
+        <span id="universe-name">Prime</span>
+      </div>
+      <div class="hud-block">
+        <span class="label">Fragments</span>
+        <span id="fragments">0 / 5</span>
+      </div>
+      <div class="hud-block">
+        <span class="label">Lives</span>
+        <span id="lives">♥♥♥</span>
+      </div>
+    </header>
+
+    <main class="stage">
+      <canvas id="game" width="960" height="540" aria-label="Multiverse Shift game canvas"></canvas>
+
+      <div id="overlay" class="overlay">
+        <div class="panel">
+          <p class="kicker">Parallel Realities</p>
+          <h1>MULTIVERSE<br />SHIFT</h1>
+          <p class="blurb">
+            Reality is fracturing. Collect <strong>5 multiverse fragments</strong> in each realm,
+            then shift before the collapse. Watch out — each universe rewrites the rules.
+          </p>
+          <ul class="controls">
+            <li><kbd>WASD</kbd> / <kbd>↑↓←→</kbd> Move</li>
+            <li><kbd>Space</kbd> / <kbd>E</kbd> Shift universe</li>
+            <li><kbd>P</kbd> Pause</li>
+          </ul>
+          <button id="start-btn" type="button">Enter the Multiverse</button>
+          <p class="hint" id="overlay-hint">Press Enter or click to start</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <span id="status">Ready</span>
+      <span class="sep">·</span>
+      <span id="shift-cd">Shift ready</span>
+    </footer>
+  </div>
+
+  <script src="js/game.js"></script>
+</body>
+</html>
